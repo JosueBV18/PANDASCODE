@@ -4,4 +4,3 @@ print('Hola mundo')
 print('Prueba 02')
 
 print('Holaaaaa')
-print('Pipipi')
