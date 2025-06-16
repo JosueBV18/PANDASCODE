@@ -15,3 +15,13 @@ print(df.info())
 
 print('________________________________________________________')
 print(df.describe(include='all'))
+
+print('________________________________________________________')
+print('DETECT DATA QUALITY ISSUES')
+df.isnull().sum()
+print(df)
+
+print('________________________________________________________')
+print('DDUPLICATE')
+df.duplicated().sum()
+print(df)
