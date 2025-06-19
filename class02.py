@@ -51,3 +51,36 @@ print('_________________________________________________________________________
 print('NORMALIZE CATEGORICAL VALUES')
 
 df['department'] = df['department'].str.lower().str.strip()#Elimina los vavalores vacios al inicio y al final
+print(df['department'].head(10))
+print('________________________________________________________________________________________________________________')
+
+df['department'] = df['department'].str.upper().str.strip()
+print(df['department'].head(10))
+
+print('________________________________________________________________________________________________________________')
+
+print('remove duplicate')
+df.drop_duplicates(inplace=True)
+df.reset_index(drop=True,inplace=True)
+print(df.shape)
+
+
+print('________________________________________________________________________________________________________________')
+
+print('create a new feature')
+df['avr_score']=df[['math_score','english_score']].mean(axis=1)
+print(df['avr_score'].head(10))
+print('________________________________________________________________________________________________________________')
+print(df.head(10))
+
+
+print('________________________________________________________________________________________________________________')
+print('display top performing students')
+topstudensts=df.sort_values(by='avr_score',ascending=False).head(10)
+print(topstudensts[['student_id','name','avr_score']])
+
+
+print('________________________________________________________________________________________________________________')
+print('export clean dateset')
+df.to_csv('students_clean_dateset.csv', index=False)
+print('ok')
