@@ -1,0 +1,83 @@
+body {
+    background-color: #eef2f3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    margin-top: 40px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    width: 350px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.resultado {
+    margin-top: 30px;
+    background-color: #f9fafb;
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+.resultado h2 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.resultado ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resultado li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    white-space: pre-wrap; /* para respetar saltos de línea */
+}

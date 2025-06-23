@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Resultado de Datos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style03.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Datos ingresados</h1>
+
+        <div class="card">
+            {% for campo, valor in datos_json|dictsort %}
+                <div class="row">
+                    <span class="campo">{{ campo }}:</span>
+                    <span class="valor">{{ valor|replace('\n', '<br>')|safe }}</span>
+                </div>
+            {% endfor %}
+        </div>
+
+        <a class="btn" href="{{ url_for('formulario') }}">Volver al formulario</a>
+    </div>
+</body>
+</html>
