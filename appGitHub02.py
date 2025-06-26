@@ -51,4 +51,7 @@ print(df01)
 
 df01['twoDonwHalf'] = df01['two'][2:]
 print(df01)
+
+
+print('')
 print('_________________________________________')
